@@ -1,15 +1,18 @@
-#include<stdio.h>
-int main(){
+#include <stdio.h>
+int main()
+{
     int n;
-    printf("Enter a number : ");
-    scanf("%d",&n);
-    if (n%2==0)
+    printf("Enter a number to check odd number upto this : ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++)
     {
-        printf("%d is a even number",n);
+        if (i % 2 == 0)
+        {
+            continue;
+        }
+        printf("%d ", i);
     }
-    else{
-        printf("%d is a odd number",n);
-    }
-    
+
     return 0;
 }
