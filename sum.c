@@ -1,14 +1,20 @@
 #include <stdio.h>
-int add(int x, int y)
-{
-    return x + y;
-}
+void sum(int n, int s);
 int main()
 {
-    int a, b;
-    printf("enter 2 num ");
-    scanf("%d%d", &a, &b);
-    int sum = add(a, b);
-    printf("%d", sum);
+    int n;
+    printf("Enter a num : ");
+    scanf("%d", &n);
+    sum(n, 0);
     return 0;
+}
+void sum(int n, int s)
+{
+    if (n == 0)
+    {
+        printf("%d", s);
+        return;
+    }
+    sum(n - 1, n + s);
+    return;
 }
