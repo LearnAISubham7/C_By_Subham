@@ -2,11 +2,11 @@
 int main()
 {
     int arr[5] = {1, 5, 4, 6, 3};
-    int sum = 0;
+    int product = 1;
     for (int i = 0; i < 5; i++)
     {
-        sum += arr[i];
+        product *= arr[i];
     }
-    printf("%d ", sum);
+    printf("%d ", product);
     return 0;
 }
