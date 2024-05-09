@@ -1,14 +1,29 @@
 #include <stdio.h>
 int main()
 {
-    int arr[6] = {1, 5, 4, 6, 3, 7};
-    int x = 4;
-    int count = 0;
-    for (int i = 0; i < 6; i++)
+    int r;
+    printf("Enter no. of students : ");
+    scanf("%d", &r);
+    int c;
+    printf("Enter no. of subject : ");
+    scanf("%d", &c);
+    int arr[r][c];
+    printf("write the roll no. and number");
+    for (int i = 0; i < r; i++)
     {
-        if (x < arr[i])
-            count++;
+        for (int j = 0; j < c; j++) //  brcause roll no +markes
+        {
+            scanf("%d", &arr[i][j]);
+        }
     }
-    printf("%d ", count);
+    printf("\n");
+    for (int i = 0; i < r; i++)
+    {
+        for (int j = 0; j < c; j++) //
+        {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
     return 0;
 }
